@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="../instagram/instagram.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <img src="../Images/instagramlogo.svg" alt="" class="logo">
+        </div>
+        <div class="userid">
+            <p id="no" class="un" oninput="handletransform()">Phone Number, Username, or Email</p>
+            <input type="text" name="" id="data" class="user" placeholder="" oninput="handletransform()">
+        </div>
+        <div class="userpass">
+            <p id="no" class="pas" oninput="handletransform()">Password</p>
+            <input type="password" name="" id="word"  class="pass" placeholder="" oninput="handletransform()" onclick="show()">
+            <span id="show" onclick="handlevalidation()">Show</span>
+        </div>
+        <div class="bu">
+            <button class="bu-2">Log In</button>
+        </div>
+        <div class="d">
+            <div class="or">___________ OR ___________</div>
+        </div>
+        <div class="fbm">
+            <i class="fa-brands fa-square-facebook"></i>
+            <div>
+                <p class="fb"> Log in with Facebook</p>
+            </div>
+        </div>
+        <div class="fp">
+            <p>Forgot Password</p>
+        </div>
+    </div>
+
+    <!-- first div end -->
+
+    <!-- second div start  -->
+
+    <div class="sign">
+        <p class="account">Don't have an Account? <span style="color: rgb(0, 119, 255);">Sign Up</span></p>
+    </div>
+
+    <!-- third section starts  -->
+
+    <div class="app">Get the app.</div>
+    <div class="img-2">
+        <img src="../Images/c5Rp7Ym-Klz.png" alt="">
+        <img src="../Images/EHY6QnZYdNX.png" alt="">
+    </div>
+
+    <!-- footer starts  -->
+
+    <footer>
+        <div class="f">Meta About Blog Jobs Help API Privacy Terms Locations Instagram Lite Threads Contact Uploading &
+            Non-Users Meta Verified</div>
+    </footer>
+
+    <!-- script starts  -->
+
+    <script>
+        function handlevalidation() {
+            let x = document.getElementById("word");
+            if (x.type === "password") {
+                x.type = "text";
+                document.getElementById("show").innerText = "Hide";
+            }
+            else {
+                document.getElementById("show").innerText = "Show";
+                x.type = "password";
+            }
+        }
+
+        function handletransform(){
+            if(document.getElementById("word").value!=""){
+                document.getElementById("no").style.fontSize="5px";
+                document.getElementById("no").style.transition="0.2s";
+                document.getElementById("no").style.top = "5px";
+                document.getElementById("show").style.display = "block";
+            }
+            else{
+                document.getElementById("no").style.fontSize="12px";
+                document.getElementById("show").style.display = "none";
+                document.getElementById("no").style.top = "146px";
+            }
+        }
+    </script>
+</body>
+
+</html>
